@@ -1,9 +1,10 @@
-const content = [];
-let conarray = [];
+ 
+ // CONTENT-INHALT AUS JSON LESEN UND HTML-ELEMENTE ERZEUGEN
+
 window.onload = function(){
     fetch("../res/content.json")
     .then(response => response.json()
-        .then(module => {
+        .then(module => {                                                                          
             let main = document.getElementsByTagName("main");
             let section = document.createElement("section");
             for (const [key, value] of Object.entries(module)) {
@@ -39,8 +40,9 @@ window.onload = function(){
 }
 
 
+// SET BIG CONTENT ON CLICK
 
-function toggleBigSec(x){
+function toggleBigSec(x){                                                                                                 
     var sectionSmall = document.getElementsByClassName("flex-item");
         for(let i = 0; i < sectionSmall.length; i++){
             if(i == x){
